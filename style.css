@@ -1,0 +1,362 @@
+/* 
+  Author: Rosinaldo Guedes
+  Github: rosig
+*/
+
+/* ------ Reset ------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #212121;
+}
+
+.wrapper {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -250px;
+  overflow: hidden;
+}
+
+.wrapper:before {
+  content:"";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #eeff41;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  animation: showlight 10s linear infinite;
+}
+
+@keyframes showlight {
+  0% {opacity:1;}
+  1% {opacity:0;}
+  2% {opacity:1;}
+  5% {opacity:0;}
+  100% {opacity:0;}
+}
+
+/* ------ Active Circle ------*/
+.active {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  background: #47B536;
+  animation: activeCircle 0.5s linear infinite;
+}
+
+@keyframes activeCircle {
+  0% {
+    opacity: 1;
+    background: #47B536;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    background: #eeff41;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background: #47B536;
+  }
+} 
+
+/* ------ Names ------*/
+.names {
+  font-family: 'Righteous', cursive;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+}
+
+.name-fusion {
+  font-size: 5em;
+  background: -webkit-linear-gradient(#fff, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveFusion 10s cubic-bezier(.34,1.28,.91,.8) infinite;
+}
+
+.name-energy-drink {
+  font-size: 1em;
+  color: #47B536;
+  animation: moveEnergy 10s cubic-bezier(.34,1.28,.91,.8) infinite;
+}
+
+@keyframes moveFusion {
+  0% {
+    transform: rotate(-20deg);
+    background: -webkit-linear-gradient(#47B536, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  4% {
+    transform: scale(1.6);
+    background: -webkit-linear-gradient(#47B536, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  8% {
+    transform: rotate(20deg);
+    background: -webkit-linear-gradient(#47B536, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  10% {
+    transform: rotate(0);
+    background: -webkit-linear-gradient(#fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {transform: scale(1);}
+}
+
+@keyframes moveEnergy {
+  0% {color: white;}
+  1% {
+    transform: scale(1.2);
+    color: #47B536;
+  }
+  2% {
+    transform: scale(0.8);
+    color: white;
+  }
+  3% {
+    transform: scale(1.2);
+    color: #47B536;
+  }
+  4% {
+    transform: scale(0.8);
+    color: white;
+  }
+  5% {
+    transform: scale(1.2);
+    color: white;
+  }
+  100% {color: #47B536}
+}
+
+/* ------ Thunders ------*/
+.thunder {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  animation: thunder 10s linear infinite;
+}
+
+/* ------ Thunder 1 ------*/
+.thunder1 {
+  left: 100px;
+}
+
+.thunder1-item {
+  width: 5px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.thunder1-item:nth-of-type(1) {
+  transform: rotate(30deg);
+  height: 60px;
+  top: -5px;
+}
+
+.thunder1-item:nth-of-type(2) {
+  transform: rotate(-10deg);
+  height: 30px;
+  top: 49px;
+  left: -12px;
+}
+
+.thunder1-item:nth-of-type(3) {
+  transform: rotate(50deg);
+  height: 30px;
+  top: 72px;
+  left: -20px;
+}
+
+.thunder1-item:nth-of-type(4) {
+  transform: rotate(-70deg);
+  height: 90px;
+  top: 67px;
+  left: 8px;
+}
+
+.thunder1-item:nth-of-type(5) {
+  transform: rotate(50deg);
+  height: 90px;
+  top: 110px;
+  left: 15px;
+}
+
+.thunder1-item:nth-of-type(6) {
+  transform: rotate(-70deg);
+  height: 90px;
+  top: 153px;
+  left: 22px;
+}
+
+.thunder1-item:nth-of-type(7) {
+  transform: rotate(70deg);
+  height: 150px;
+  top: 113px;
+  left: 133px;
+}
+
+.thunder1-item:nth-of-type(8) {
+  transform: rotate(-62deg);
+  height: 280px;
+  top: 89px;
+  left: 326px;
+}
+
+.thunder1-item:nth-of-type(9) {
+  transform: rotate(70deg);
+  height: 230px;
+  top: 218px;
+  left: 341px;
+}
+  
+.thunder1-item:nth-of-type(10) {
+  transform: rotate(-70deg);
+  height: 100px;
+  top: 339px;
+  left: 279px;
+}
+
+.thunder1-item:nth-of-type(11) {
+  transform: rotate(70deg);
+  height: 285px;
+  top: 313px;
+  left: 194px;
+}
+
+/* ------ Thunder 2 ------*/
+.thunder2 {
+  left: 700px;
+}
+
+.thunder2-item {
+  width: 5px;
+  background-color: #47B536;
+  position: absolute;
+}
+
+.thunder2-item:nth-of-type(1) {
+  transform: rotate(-30deg);
+  height: 60px;
+  top: -5px;
+}
+
+.thunder2-item:nth-of-type(2) {
+  transform: rotate(70deg);
+  height: 30px;
+  top: 39px;
+  right: -6px;
+}
+
+.thunder2-item:nth-of-type(3) {
+  transform: rotate(-20deg);
+  height: 60px;
+  top: 54px;
+  right: -4px;
+}
+
+.thunder2-item:nth-of-type(4) {
+  transform: rotate(80deg);
+  height: 50px;
+  top: 90px;
+  right: 9px;
+}
+
+.thunder2-item:nth-of-type(5) {
+  transform: rotate(-30deg);
+  height: 100px;
+  top: 111px;
+  right: 8px;
+}
+
+.thunder2-item:nth-of-type(6) {
+  transform: rotate(80deg);
+  height: 120px;
+  top: 153px;
+  right: 42px;
+}
+
+.thunder2-item:nth-of-type(7) {
+  transform: rotate(-25deg);
+  height: 120px;
+  top: 110px;
+  right: 124px;
+}
+
+.thunder2-item:nth-of-type(8) {
+  transform: rotate(25deg);
+  height: 50px;
+  top: 113px;
+  right: 159px;
+}
+
+.thunder2-item:nth-of-type(9) {
+  transform: rotate(-50deg);
+  height: 90px;
+  top: 86px;
+  right: 202px;
+}
+
+.thunder2-item:nth-of-type(10) {
+  transform: rotate(45deg);
+  height: 340px;
+  top: 55px;
+  right: 356px;
+}
+
+.thunder2-item:nth-of-type(11) {
+  transform: rotate(-45deg);
+  height: 40px;
+  top: 337px;
+  right: 463px;
+}
+
+.thunder2-item:nth-of-type(12) {
+  transform: rotate(70deg);
+  height: 50px;
+  top: 353px;
+  right: 472px;
+}
+
+.thunder2-item:nth-of-type(13) {
+  transform: rotate(-75deg);
+  height: 450px;
+  top: 219px;
+  right: 279px;
+}
+
+@keyframes thunder {
+  0% {opacity:1;}
+  1% {opacity:0;}
+  2% {opacity:1;}
+  5% {opacity:0.1;}
+  13% {opacity:0;}
+  100% {opacity:0;}
+}
